@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="shortcut icon" href="../ex_004/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outras Formatações</title>
+</head>
+<body>
+    <h1>Outras Formatações</h1>
+
+    <hr> <hr>
+
+    <h2>Códigos-Fonte</h2>
+    O comando <code>document.getelEmentById  ('teste')</code> é escrito em linguagem JavaScript.
+
+    <pre>
+        <code>
+        function Converter() {
+    var valorCotacao = document.getElementById("cotacao").value;
+    var valorDolar = document.getElementById("valor").value;
+
+    var valorEmReais = valorDolar * valorCotacao
+    var valorEmReais = valorEmReais.toFixed(2)
+
+    var elementoValorConvertido = document.getElementById("valorConvertido")
+    var valorConvertido = "O resultado em real é R$" + valorEmReais
+    elementoValorConvertido.innerHTML = valorConvertido
+        }
+        </code>
+    </pre>
+
+    <hr> <hr>
+
+    <h2>Citações Simples e Citações Compostas</h2>
+
+    <h3>Citações Simples</h3>
+
+    <p>|Como diria o pai de uma amigo: <em><q>O computador é um burro muito rápido</q></em> </p>
+
+    <h3>Citações Compostas</h3>
+    <p>Segundo J. Nobbel, no seu livro HTML e CSS3, para leigos:  <blockquote cite="https://www.google.com.br/books/edition/HTML_XHTML_and_CSS_For_Dummies/EGp9DgAAQBAJ?hl=pt-BR&gbpv=1&dq=html+e+css&printsec=frontcover"><em><q>Todo livro é muito massa</q></em>.</blockquote> </p>
+
+    <hr> <hr>
+
+    <h2>Abreviações</h2>
+
+    <p>Estou estudando <abbr title="Galinha Pintadinha">HTML</abbr> e <abbr title="Galinha Pintadinha">CSS</abbr>.</p>
+
+    <hr> <hr>
+
+    <h2>Texto Invertido</h2>
+    <p><bdo dir="rtl">A galinha pintadinha está tomando banho na máquina.</bdo></p>
+
+
+
+    
+</body>
+</html>
