@@ -5,60 +5,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabelas em <HTML></HTML></title>
+    <title>Tabelas em html</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            background-color: rgba(0, 255, 255, 0.575);
         }
+
+        main {
+            background-color: white;
+            margin: auto;
+            margin-top: 50px;
+            width: 450px;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.338);
+        }
+
+h1 {
+    text-align: center;
+    text-decoration: underline double ;
+}
+
         table {
             width: 380px;
             height: 150px;
             border: 2px solid black;
             border-collapse: collapse;
+            margin: auto;
+            text-align: center;
+            box-shadow: 2px 2px 5px blue;
+        }
+
+        tr.linha {
+            background-color: rgba(0, 0, 255, 0.533);
         }
 
         td {
-            border: 2px solid black;
-           padding: 8px;
+            border: 4px solid rgb(0, 13, 255);
+            padding: 8px;
+            box-shadow: 2px 2px 5px blue;
+        }
+
+        td.dado {
+            background-color: yellow;
         }
     </style>
 </head>
 <body>
 
-    <h1>Minha Primeira Tabela</h1>
+   <main>
+       <h1>Minha Primeira Tabela</h1>
+            <!--
+                HIERARQUIA DE TABELAS (simples)
+                TABLE = tabela
+                 TABLE ROW = linha de tabela
+                    TABLE HEADER = cabeçalho de tabela
+                    TABLE DATA = dados da tabela
+            -->
+       
+        <table>
+            <tr> <!--Primeira linha-->
+                <td>A1</td>
+                <td>B1</td>
+                <td>C1</td>
+            </tr>
+            <tr>  <!--Segunda linha-->
+                <td>A2</td>
+                <td>B2</td>
+                <td>C2</td>
+            </tr>
+            <tr class="linha">  <!--Terceira linha-->
+                <td>A3</td>
+                <td>B3</td>
+                <td class="dado">C3</td>
+            </tr>
+            <tr>  <!--Quarta linha-->
+                <td>A4</td>
+                <td>B4</td>
+                <td>C4</td>
+            </tr>
+        </table>
+   </main> <
     
-    <table>
-        <tr>
-            <td>A1</td>
-            <td>B1</td>
-            <td>C1</td>
-        </tr>
-        <tr>
-            <td>A2</td>
-            <td>B2</td>
-            <td>C2</td>
-        </tr>
-        <tr>
-            <td>A3</td>
-            <td>B3</td>
-            <td>C3</td>
-        </tr>
-        <tr>
-            <td>A4</td>
-            <td>B4</td>
-            <td>C4</td>
-        </tr>
-    </table>
-    <table>
-        <thead>
-
-        </thead>
-        <tbody>
-
-        </tbody>
-        <tfoot>
-            
-        </tfoot>
-    </table>
 </body>
 </html>
