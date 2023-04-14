@@ -9,11 +9,17 @@
 <style>
     body {
         font-family: Arial, Helvetica, sans-serif;
+      padding-top: 50px;
+      
     }
 
     table {
-        width: 500px;
+        position: relative;
+        background-color: rgba(0, 255, 255, 0.297);
+        width: 450px;
         border-collapse: collapse;
+        margin: auto;
+        box-shadow: 1px 1px 5px blue;
     }
 
     td, th {
@@ -21,17 +27,60 @@
         padding: 6px;
     }
 
+    tbody > tr:nth-child(1n) {
+        background-color: rgba(0, 0, 255, 0.597);
+      
+    }
+
+    tbody > tr:nth-child(3n-1) {
+        background-color: rgba(255, 255, 0, 0.771);
+    }
+
+    tbody > tr:nth-child(3n) {
+        background-color: rgba(255, 0, 0, 0.655);
+       
+    }
+
+    tbody > tr:nth-child(1n):hover {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    tbody > tr:nth-child(3n-1):hover {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    tbody > tr:nth-child(3n):hover {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+   
+
     caption {
         font-size: 1.5em;
         font-weight: bold;
         padding: 8px;
         background-color: rgba(0, 0, 255, 0.418);
-        border: 1px solid black;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        border-radius: 10px 10px 0px 0px;
+        box-shadow: 1px 1px 5px blue;
     }
+
+    
 
     thead, tfoot {
         background-color: rgb(156, 155, 155);
         color: white;
+    }
+
+    thead > tr  th {
+        position: sticky;
+        top: -1px;
+        background-color: rgb(156, 155, 155);
     }
 
     td.num {
@@ -42,7 +91,6 @@
 </head>
 <body>
 
-    <h1>Uso de Tabelas Grandes</h1>
     <!--Anatomia para tabelas grandes
       TABLE
         CAPTION
@@ -60,64 +108,64 @@
 
         <thead>
             <tr>
-                <th>Posição</th>
-                <th>Estado</th>
-                <th>População</th>
+                <th style="width: 50px;">Posição</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
 
 
         <tbody>
             <tr>
-                <td>1</td>
+                <td>01</td>
                 <td>São Paulo</td>
                 <td class="num">45.919.049</td>
             </tr>
 
             <tr>
-                <td>2</th>
+                <td>02</th>
                 <td>Minas Gerais</td>
                 <td class="num">21.168.791</td>
             </tr>
 
             <tr>
-                <td>3</td>
+                <td>03</td>
                 <td>Rio de Janeiro</td>
                 <td class="num">17.264.943</td>
             </tr>
 
             <tr>
-                <td>4</th>
+                <td>04</th>
                 <td>Bahia</th>
                 <td class="num">14.873.064</th>
             </tr>
 
             <tr>
-                <td>5</th>
+                <td>05</th>
                 <td>Paraná</th>
                 <td class="num">11.433.957</th>
             </tr>
 
             <tr>
-                <td>6</th>
+                <td>06</th>
                 <td>Rio Grande do Sul</th>
                 <td class="num">11.377.239</th>
             </tr>
 
             <tr>
-                <td>7</th>
+                <td>07</th>
                 <td>Pernambuco</th>
                 <td class="num">9.557.071</th>
             </tr>
 
             <tr>
-                <td>8</td>
+                <td>08</td>
                 <td>Ceará</td>
                 <td class="num">9.132.076</td>
             </tr>
 
             <tr>
-                <td>9</td>
+                <td>09</td>
                 <td>Pará</td>
                 <td class="num">8.602.865</td>
             </tr>
@@ -252,11 +300,13 @@
         <tfoot>
             <tr>
                 <th></th>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>210.147.125</strong></td>
             </tr>
         </tfoot>
     </table>
+
+    
 
 </body>
 </html>
