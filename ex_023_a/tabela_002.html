@@ -18,8 +18,8 @@
         table {
             width: 600px;
             border-collapse: collapse;
-            background-color: rgba(57, 57, 231, 0.321);
             margin: auto;
+            position:relative
         }
 
         caption {
@@ -33,19 +33,33 @@
            border-radius: 8px 8px 0px 0px;
         }
 
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
+        tbody > tr:nth-child(3n) {
+            background-color: gainsboro;
+        }
+
         td, th {
             border: 1px solid black;
             padding: 10px;
          }
 
          tr:hover {
+            font-size: 1.1em;
+            font-weight: bold;
             text-decoration: underline;
          }
 
-         tr:hover {
-            font-size: 1.2em;
-            font-weight: bold;
-            background-color: gainsboro;
+         tr#naounderline {
+            text-decoration: none;
+         }
+
+         th#naounderline1 {
+            text-decoration: none;
          }
 
         thead, tfoot {
@@ -87,7 +101,7 @@
             <caption>População do Brasil por estados</caption>
 
             <thead>
-                <tr style="background-color: gray;">
+                <tr style="background-color: gray;" id="naounderline">
                     <th scope="col">Posição</th>
                     <th scope="col">Estado</th>
                     <th scope="col" style="width: 50px;">População</th>
@@ -320,7 +334,7 @@
                 <tr style="background-color: gray;">
                     <td></td>
                     <td></td>
-                    <th scope="row">Total Habitantes</th>
+                    <th scope="row" id="naounderline1">Total Habitantes</th>
                     <td class="num"><strong>214.324.776</strong></td>
                 </tr>
             </tfoot>
